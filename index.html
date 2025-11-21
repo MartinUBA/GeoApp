@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoApp-Martin Nuñez</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@^5.9.0/dist/maplibre-gl.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="contenedor-app">
+
+        <header>
+        <div class="barra-navegacion">
+
+
+            <input type="text" id="ingresarDatos" placeholder="Buscar ubicación...">
+            <button id="btnBuscar" class="btn btn-primario">Buscar</button>
+            <span id="visualizacion-distancia" class="visualizacion-distancia"> distancia: --m</span>
+            <button id ="btnLimpiarRuta" class="btn btn-borde">Limpiar Ruta</button>
+        </div>
+        </header>
+        
+        <div class="contenido">
+
+            <button id="btn-menu-hamburguesa">
+                <img src="./assets/menu-harmburguesa.svg" alt="">
+            </button>
+
+            <sidebar id="sidebar">
+                <div class="contenedor-filtro-categorias">
+                    <select id="filtro-categorias">
+                        <option value="all">Todas las categorías</option>
+                        <option value="SHELL">SHELL</option>
+                        <option value="YPF">YPF</option>
+                        <option value="ESSO">ESSO</option>
+                    </select>
+                </div>
+                <div class="encabezado-leyenda">
+                    <H3>Leyenda</H3>
+                </div>
+
+                <div id="cuerpo-leyenda" class="cuerpo-leyenda">
+
+                </div>
+            </sidebar>
+
+            <div class="contenedor-mapa">
+                <div id="map"></div>
+
+                <div class="contenedor-favoritos">
+                    <button id="btn-favoritos" class="btn-favoritos">
+                        <img src="./assets/favoritos.svg" alt="">
+                    </button>
+                    <div id= "lista-favoritos"class="lista-favoritos">
+                        <div class="contenido-favoritos">
+                            <p>No hay puntos guardados</p>
+                        </div>
+                    </div>                    
+                </div>
+
+
+
+            </div>
+
+             
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
