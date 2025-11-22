@@ -64,6 +64,10 @@ export function Geocodificacion (
             if(marcadorPOI) {           // Si existe el marcador, lo remueve
                 marcadorPOI.remove()
             }
-    
+            // Reset the displayed distance text
+            if (txtVisualizarDistancia) {
+                txtVisualizarDistancia.textContent = ' distancia: --m';
+            }
+
         })
 }
