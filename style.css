@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1E90FF;
+    --primary-color: #ffffff;
     --secondary-color: #0904465d;
     --secondary-dark: #fdfdff;
 }
@@ -21,7 +21,24 @@
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 12px
+    padding: 12px;
+    border: 1px solid #c3c3c300;
+}
+
+.logo-nav {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.text-heading{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    margin-right: 10px;
 }
 
 .barra-navegacion {
@@ -29,13 +46,22 @@ header {
     gap: 10px;
     align-items: center;
     flex-wrap: wrap;
+    color: black;
+}
+
+#btnLimpiarRuta{
+    
+    cursor: pointer;
+    border: 1px solid #c3c3c3;
+    border-radius: 20px;
+    color: black;
 }
 
 #ingresarDatos {
     flex-grow: 1;
     padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
+    border: 1px solid #c3c3c3;
+    border-radius: 8px;
 
 }
 
@@ -62,6 +88,7 @@ header {
     font-size: 14px;
     background-color: white;
     border-radius: 20px;
+    border: 1px solid #c3c3c3;
 }
 
 .btn-borde {
@@ -91,27 +118,33 @@ header {
     margin: 12px;
     padding: 8px;
     border-radius: 4px;
-    border: #f8f8f885;
+    border: 1px solid #1f1e1385;
 }
 
 sidebar {
     background-color: white;
     z-index: 1;
     height: 100%;
+    border:1px solid #c3c3c3;
+}
+
+.text-sidebar{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 6px;
 }
 
 .contenedor-filtro-categorias {
     margin: 12px;
-    border-bottom: 1px solid #f8f8f885;
+    border-bottom: 1px solid #68666685;
 }
 
 .encabezado-leyenda H3 {
-    font-family: 'Inter', sans-serif;
-    margin: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 6px;
     padding: 13px;
-
-
-
 }
 
 .item-leyenda {
@@ -126,7 +159,7 @@ sidebar {
     height: 12px;
     margin: 8px;
     border-radius: 50%;
-    border: 1px solid gray;
+    border: 1px solid rgb(85, 84, 84);
 }
 
 .contenedor-mapa{

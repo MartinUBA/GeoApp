@@ -13,6 +13,12 @@ export function Ruteo(
         map.removeSource('ruta_source');
     }
 
+    // Remove existing destination marker if present
+    const existingMarker = document.querySelector('[data-marker-id="marcador_destino_ruta"]');
+    if (existingMarker) {
+        existingMarker.parentElement.remove();
+    }
+
     //Con esto llamo a la api de ruteo de location IQ. Luego invoco las propiedades geometry y distance.
     fetch(`https://us1.locationiq.com/v1/directions/driving/${longitudUsuario},${latitudUsuario};${longitudPOI},${latitudPOI}?key=${YOUR_ACCESS_TOKEN}&geometries=geojson`)
         .then((response) => response.json())
@@ -36,6 +42,11 @@ export function Ruteo(
                     'line-width': 4,
                 }
             })
+
+            // Add red marker at destination (end of route)
+            const marcadorDestino = new maplibregl.Marker({ color: '#8d0000ff' })
+                .setLngLat([longitudPOI, latitudPOI])
+                .addTo(map);
 
         })
 }
